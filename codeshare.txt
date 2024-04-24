@@ -204,9 +204,8 @@ Project1:
     go ahead and login to the existing server, and get the info needed for the new server.
     existing server info:
       server name : 198.58.119.40
-      username: u5bt   
-      password : ******
-  
+      username: u5bt
+      password: abc
     
     we need below info:
       -number of hard drive:
@@ -417,7 +416,7 @@ c- This server is going to be use to host an application and you are in charge o
       https://dataservicegroup.atlassian.net/l/cp/1BT00SB0
         
       Email: confluence-user@utrains.org
-      Password : ***********
+      Password : utrains-school123
   
 d- navigate into the /var/www/html directory and in the index.html file  modify the name Alex Smith ( it is in 3 places in that file ) to your own name 
     then refresh the browser to see the changes. 
@@ -616,7 +615,7 @@ and innovate faster.
     existing server info:
       server name : 198.58.119.40
       username: u5bt
-      password: ****
+      password: abc
     
     we need below info:
       -number of hard drive:
@@ -778,7 +777,7 @@ login to this server and answer below question:
 server info:
       server name : 198.58.119.40
       username: u5bt
-      password: ****
+      password: abc
   
 a- check what user is running python3 program on the system? what is the first and last name of that user?
 b- what is the process id of that process?
@@ -2805,3 +2804,95 @@ Go ahead and make the necessary changes. packages { vim,curl,wget} port 8000 sho
 20-In the utc-app-pipeline pipeline, add a step to create a container with the image built, display the container running before the image push.
 this is just a test case to know if the image is good.
 21-what is the difference between agile kanban,scrum and scrumban?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% week 14 
+
+
+ %%%%%%%%%%%%%%%%  Phone screening with the recruiter %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+*** recruiter intro ==> about the position, company and what he is looking for. ( focus on knowing you as a person)	
+Tell me bit about you	
+where are you located	
+are you ready to relocate	
+are you authorize to work in the US	
+are you currently employed	
+what is your company's technology stack 	
+I see in your resume that you worked on ABC can you elaborate on that?	
+any experience with JAVA?	
+any python scripting ?	
+are you ok with a hybrid position	
+any azure experience? 	
+why are you looking for a change?	
+what is your expectation for your next role ( job description )	
+what is your availability to start	
+what are your expectation as far as compensation	( what is the pay range for this role? )
+
+some tech questions given by the hiring manager:
+
+1- what is a 3 way handshake?
+2- what is a provider in terraform
+3- how do download a docker image
+4- what is permission 740
+5- what is the port for ssh, http and https
+6- how would you get all the lines with the word error in a file? 
+
+Question you can ask: 
+
+what does the interview process look like? how many rounds... any take-home project? 	
+anything that I should be aware of ? i mean give me a tips to successfully pass the interview?	
+when can I expect the next round to be scheduled?	
+
+%%%%%%%%%%%%%%%%%%%    Hiring Manager     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Technical skills: ( can be learned by everybody )
+*** The knowledge and understanding around the skilset in your RESUME.
+Linux 
+Docker:
+Scripting: 
+CI/CD
+Jenkins: 
+Ansible:
+eks:
+IaC: ==>Terraform
+Monitoring:
+Production support?
+Troubleshooting? ( thought process )
+
+Cloud: 
+CLI: 
+  
+Did you manage ?
+Engineer those solutions? 
+walk me through the process of  ... ( details explaination )
+Problem solving skills:
+  scenario base questions: 
+
+Cultural fit ( soft skill ):
+  conflict:
+  work under pressure:
+  adapt to change 
+  leadership 
+  How do you relate to others?
+  what will your colleague say about you?
+  what do you think you have that is unique
+  what would you do if you had super power
+  How do you prioritise your work 
+
+Communication and cross functional team collaboration:
+  project done in collaboration
+
+QUestions for hiring:
+  get questions from what was discussed:
+  Understand the team culture  
+  Understand different technologies used in the team
+  Understand expectation in the next 15 to 30 day
+  Hiring manager profile
+  
+%%%%%%%%%%%%%%%%%%%%%%%%% Technical interview %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Listen carefully to the questions:
+  ask for clarification if needed
+Build your answer:
+  take time to respond
+Know how to not explain what you dont know.
+and do your homework ( build these solutions in preparation)
+                         
