@@ -204,8 +204,9 @@ Project1:
     go ahead and login to the existing server, and get the info needed for the new server.
     existing server info:
       server name : 198.58.119.40
-      username: u5bt
-      password: abc
+      username: u5bt   
+      password : ******
+  
     
     we need below info:
       -number of hard drive:
@@ -416,7 +417,7 @@ c- This server is going to be use to host an application and you are in charge o
       https://dataservicegroup.atlassian.net/l/cp/1BT00SB0
         
       Email: confluence-user@utrains.org
-      Password : utrains-school123
+      Password : ***********
   
 d- navigate into the /var/www/html directory and in the index.html file  modify the name Alex Smith ( it is in 3 places in that file ) to your own name 
     then refresh the browser to see the changes. 
@@ -615,7 +616,7 @@ and innovate faster.
     existing server info:
       server name : 198.58.119.40
       username: u5bt
-      password: abc
+      password: ****
     
     we need below info:
       -number of hard drive:
@@ -777,7 +778,7 @@ login to this server and answer below question:
 server info:
       server name : 198.58.119.40
       username: u5bt
-      password: abc
+      password: ****
   
 a- check what user is running python3 program on the system? what is the first and last name of that user?
 b- what is the process id of that process?
