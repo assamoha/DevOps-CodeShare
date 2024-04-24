@@ -1,0 +1,2806 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Welcome to the november 2023 session %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  week1 day1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+day 1
+Intro to class orientation, q and a
+
+best friends:
+  1- youtube 
+  2- google
+  3- ChatGPT    https://chat.openai.com/chat
+  
+  NB: book mark
+  
+*****week1 day2
+
+Intro to computer basics hardwares and software 
+1- BASIC COMPUTER HARDWARE
+
+	a- What is a computer and how does it work? 
+  
+   Input ===> Process ====> Output
+  
+  b- Internal components (the case)
+  	- Power supply
+    - Motherboard
+    - CPU
+    - Heat sink
+    - Hard drive (HDD, SSD)
+    - RAM
+    - Drive (CD, DVD)
+    - Extension cards (sound, video, network )
+  
+  c- Input and output devices
+  	- Input (Keyboard, mouse, webcam, microphone, scanner)
+    - Output (monitor, printer, speakers)
+  
+2- BASIC COMPUTER SOFTWARE
+
+a- What is a software and why do we need them?
+
+b- Types of softwares
+	- System softwares (OS = Windows, MacOS, Linux, Android, ios,...)
+  		- Role/function of the OS in the computer architecture
+      - Utility softwares intergrated in the OS (Antiviruses, disk/file managers, backup utilities, network utilities ...)
+  - Application softwares (word processing, spreadsheets. web browsers, games, databases etc...)
+
+
+** Create a lightsail server:
+
+NB: always poke around, read the error, troubleshoot
+
+** Linux commands
+
+**cli ==> command line interface
+Linux Flavors: centos, ubuntu Debian
+
+date    ==> to check the date on the server
+uptime  ==> to check how long the system have been running
+clear   ==> the clear the terminal screen
+free -m ==> check the total memory used and available memory
+pwd     ==> print working directory ( check where you are on the server)
+mkdir   ==> create folders or directories on the system
+ls      ==> list directory content
+touch   ==> create files 
+history ==> check all previous typed commands
+man     ==> manual of a command.
+lsblk  ==> list block device ( hard drives)
+
+%%%%%%%%%%%%%%%%%%%%%%% week2 day1 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+****intro to linux
+  created in 91 by Linus Torvalds
+  different flavor :
+    centos            
+    ubuntu
+    debian
+    kali
+    mint
+    alpine
+    redhat
+    fedora 
+    and more ....
+***linux components:
+    Linux is composed of several key components that work together to provide the functionality of the operating system. 
+These components include:
+Kernel: The Linux kernel is the core of the operating system. It manages hardware resources, controls system processes, 
+and provides services to applications.
+Shell: The Linux shell is a command-line interface that allows users to interact with the operating system. 
+It is a powerful tool that can be used to perform a wide range of tasks, from basic file management to complex system administration.
+Filesystem: The Linux filesystem is a hierarchical structure that organizes files and directories. It is based on the Unix filesystem and provides a standardized way of accessing and storing data.
+Applications: Linux supports a wide range of applications, including web browsers, office suites, media players, and development tools. Many applications are open source and can be freely downloaded and modified.
+Libraries: Linux includes a large collection of libraries that provide common functionality to applications. These libraries can be used by developers to simplify the development process and make their applications more efficient.
+Utilities: Linux includes a variety of utilities that provide additional functionality, such as text editors, network tools, and system monitoring tools. These utilities are often command-line based and can be used to automate tasks or perform complex operations.
+
+
+***Linux commands practice:
+  
+date    ==> to check the date on the server
+cal     ==> to check the calendar
+uptime  ==> to check how long the system have been running
+clear   ==> the clear the terminal screen
+free -m ==> check the total memory used and available memory
+free -g ==> same in gigabytes
+pwd     ==> print working directory ( check where you are on the server)
+mkdir   ==> create folders or directories on the system
+ls      ==> list directory content
+ls -l   ==> long listing
+touch   ==> create files 
+history ==> check all previous typed commands
+man     ==> manual of a command. 
+nproc   ==> check number of cpu
+lsblk  ==> to check block device or hard drive
+lscpu  ==> check cpu info 
+cd     ==> change directory
+cd ..  ==> move back one step
+cd     ==> move back to your home directory
+rm     ==> delete files
+rm -r  ==> delete directory 
+cat    ==> display the file content
+vi,vim, nano     ==> edit files in linux 
+
+*** System inventory ( server decommisioning , Server end of lease, end of life. )
+
+	  uptime ==> to check how long the system have been running
+    lscpu ==> check cpu info
+    cat /etc/os-release  ==> os type and version
+    nproc  ==> check number of cpu
+    lsblk  ==> to check block device or hard drive
+    uname -r ==> to check the kernel version
+    top   ==> to check cpu, memory, uptime, and all the process running   
+    free -m  ==> to check memory
+    last reboot
+    
+*** files/directories commands
+  	 mkdir  ==> to create folders
+     touch  ==> to create files
+     ll, ls, ls -l  ==> to list directory content
+     cd  ==> to change directory
+     cp, cp -r  ==> to copy files and directory 
+     mv  ==> to rename a file or move it to a new location
+     find ==> use to check file or directory path
+     find / -name <file-name>
+     vi  ==> to edit files
+     cat ==> display file content
+     rm -r, rm -rf  ==> to delete files and directories
+    
+*** package/softwares managment commands
+
+yum install <package name>
+
+example:  yum install httpd 
+  
+yum remove <package name>
+
+example:  yum remove httpd
+  
+yum whatprovides <package or command>
+
+example:  yum whatprovides git
+  
+*** Other commands:
+    man
+    history
+    echo
+  
+Project1:
+  1- You receive a request to create a test centos 7 server. go ahead and create it with lightsail service.
+  with below specs:
+   region: n. Virginia
+    platform: linux
+    blueprint: os only
+    os :  centos 7
+    keypair: N/A
+    cpu: 2 vcpu's
+    Memory: 512 MB
+    hard drive: 15 
+    Server Name: dev-test-server
+      
+  2- what is linux ?
+  3- what are the features of linux 
+  4- what is the linux architechture or  the components of linux?
+  5- what is cli ?
+  6- what is a shell?
+  7- login the server created in question 1 and do a complete inventory
+     - number of cpu's
+     - cpu speed
+     - kernel version
+     - total memory size
+     - hard drive number and size(s)
+     - how long the system is up
+     - what os is installed on it and the version
+    
+  8- create a file called linux_command
+  9- add 30 linux commands in the file linux_command and what they are for.
+  10- run a command to install git package on the server 
+  10- what is your favorite command in linux and why?
+ 11- what are some linux flavor that you know ?
+ 12- delete the centos 7 server created in question 1.
+ 
+
+ ******Project2 :
+    
+    1- At work , we need a server build. so we need to submit info about this server to the build team.
+    we already have a server with the exact config needed.
+    go ahead and login to the existing server, and get the info needed for the new server.
+    existing server info:
+      server name : 198.58.119.40
+      username: u5bt
+      password: abc
+    
+    we need below info:
+      -number of hard drive:
+      -hard drive size:
+      -os or linux flavor and version:
+      -kernel version:
+      -Memory or ram total size in gigabytes:
+      -number of cpu's:
+      - how long the system have been running
+      - number of users connected.
+      
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% week 3
+
+1- board discuss traffic ==> LB ==> ws ==> DB ==> Monitoring ==> Third Party
+                                          
+*** different team at work 
+    - network Team
+    - security Team
+    - infrastructure Team
+    - middleware Team
+    - linux SA Team
+    - DBA Team
+    - cloud Team
+    - configuration Team
+    - qa Team
+    - uat Team
+    - DevOps Team
+    
+2- Introduction to computer networks
+
+	a- Overview on computer networks
+  	- What is a computer network and why do we need it?
+    - What are some network devices? (hub, switch, router)
+    - The network can be wired (network cables) or wireless (Bluetooth, Wifi, ...)
+  
+  b- The OSI model (Open System Interconnect)
+  	- What is the OSI model and why was it put in place?
+    - What are the 7 layers of the OSI model?
+    
+  c- Difference betwee TCP and UDP protocols (transport Layer L4)
+  
+  d- The notion of IP address Version 4
+  	- What is an IP address and how is it composed?
+    - What are the classes of IP addresses?
+    - What is a subnet mask
+    - How to determine de number of IP addresses available in a network?
+    - How to convert an IP address from octects to bits?
+    - What is the difference between the IP address and the MAC address?
+***connectivity:
+  ping command
+  
+3- The vi command
+
+	a- What is vi?
+  
+  b- Getting started with vi
+  	- Open a file
+    - vi modes (command and insert mode)
+    - save and exit (ESC :wq)
+    - save without exit (ESC :w)
+    - exit without saving (ESC :q!)
+    
+  c- Useful tips in vi
+  	- inserting text (i, o, a)
+    - Deleting text (dd, dw, x, u)
+    - copy, cut and paste (yy, dd, p)
+    - move in file (arrow keys, k,j,h,l, [[, ]])
+    - search text (/text)
+ 
+4- **Linux commands review
+
+        1 date ==> to check the date
+        2 uptime ==> to check how long the server have been up
+        3 whoami ==> to check who is logged in
+        4 cd ==> to change directory
+        5 cp ==> to copy files and directory
+        6 mv ==> to rename a file or move it to a new location
+        7 free ==> to check memory
+        8 touch ==> to create files
+        9 clear ==> to clear the terminal
+       10 top ==> to check cpu, memory, uptime, and all the process running
+       11 uname -r ==> to check the kernel version
+       12 history ==> to check previous typed command
+       13 exit ==> to exit a terminal or a user
+       14 echo ==> to display any message
+       15 sudo ==> to escalate privilege
+       16 mkdir ==> to create folders
+       17 lsblk ==> to check block device or hard drive
+       18 cal ==> to check the calendar
+       19 man ==> to check documentation about specific command
+       20 ls ==> to list directory content
+       21 pwd ==> to check the current working directory
+       22 rm ==> to delete files and directories
+       23 nproc ==> check number of cpu
+       24 ssh ==> use to login to a linux server remotely 
+       25 find ==> use to check file or directory path
+       26 vi ==> to edit files
+       27 id ==> to check user's id
+       28 df ==> to check disk utilisation
+       29 lscpu ==> check cpu info 
+       30 cat ==> display file content
+       31 more ==> display one page document at the time
+       32 less ==> display one page document at the time
+       33 grep ==> filter strings from file
+       34 wget ==> download file from a url source
+       35 yum, apt, ==> install packages 
+       36 ping ==> check connectivity between two devices.
+       37 systemctl ==> start, stop, restart, enable 
+       36 cat /etc/os-release ==> os type and version 
+   **Other notions 
+       -pipe |  ==> use to separate many commands
+       -redirect and append (> and >> )
+      
+  
+  *** Project:
+    
+* Install apache
+
+yum install httpd -y
+systemctl start httpd
+systemctl enable httpd
+cd /var/www/html/
+touch index.html
+vi index.html
+<h1> This is my first website my name is Serge </h1>
+
+
+Project:
+
+  1- what is the osi model?
+  2- what are some problems found on l1 and l3
+  3- what is the difference between TCP and UDP ?
+  4- what is the difference between a hub and a switch?
+  5- what happen when you type geico.com on the browser?
+  6- what is an ip address ?
+  7- what class is the ip 245.0.0.258 ?
+  8- what do you use to edit files in linux ?
+  9- how do you save and quit a file in vi?
+  10- some packages are missing on the system and need to be installed type a command to install them.
+  packages:  docker, java-11-openjdk-devel, net-tools, 
+    
+  11- if a server has an issue, and you need to pull just the lines in the log file with 
+  the word error how can you do that?
+  12- how do you create an empty file?
+  13- how do you create an empty directory?
+  15- what are some directories found in the / directory?
+  16- create a file on your system called study.log
+  17- in the file study.log , add 40 commands and what they are for ( dont cheat)
+  18- type a command to display the content of study.log
+  19- How can we display just the 5 last lines of study.log?
+  20-there is a file that need to be downloaded on your server and this is the url to the file 
+  please type a command to download that file.
+  https://github.com/utrains/static-resume/archive/refs/heads/main.zip
+  21- there is a file on your system called yum.log , type a command to display its content.
+ 
+%%%%%%%%%%%%%%%% Project to do at home 
+  
+1- Apache is the most widely used webserver software and runs on 67% of all websites in 
+  the world. Developed and maintained by Apache Software Foundation, Apache is open source 
+  software and available for free.
+It’s fast, reliable, and secure. And Apache can be highly customized to meet the needs of 
+many different environments by using extensions and modules.
+
+Most WordPress hosting providers use Apache as their webserver software. However, 
+WordPress can run on other webserver software as well.
+
+  To install and configure apache webserver on a linux machine ( centos, amazon linux ) , we need to follow bellow steps
+for centos:
+
+**Install apache in centos/ redhat
+yum install httpd -y 
+
+** Start , check the status and enable apache daemon
+systemctl start httpd
+systemctl status httpd
+systemctl enable httpd
+
+** Create custorm content for the browser
+
+cd /var/www/html
+touch index.html
+vi index.html 
+<h1>This is my first website </h1>
+
+go and refresh the browser
+
+2-
+a- create a linux server using the lightsail service in aws with below specs:
+    region: n. Virginia
+    blueprint: os only
+    os :  centos 7
+    key: week3
+    cpu: 1
+    Memory: 512 MB
+      
+b- gain root access and to a full inventory of the system:
+      - total memory
+      - number of cpu
+      - os type and version
+      - kernel version
+      - number of hard drive and size
+      - how long the system have been up
+      
+c- This server is going to be use to host an application and you are in charge of setting it up. there is a
+    document in confluence on how to do it. follow the document and configure your server.
+    confluence page link and credentials to log in:
+      
+      https://dataservicegroup.atlassian.net/l/cp/1BT00SB0
+        
+      Email: confluence-user@utrains.org
+      Password : utrains-school123
+  
+d- navigate into the /var/www/html directory and in the index.html file  modify the name Alex Smith ( it is in 3 places in that file ) to your own name 
+    then refresh the browser to see the changes. 
+  
+e- Take a backup or snapshot of the server so that we dont loose all our changes on the server when we delete it .
+    give the name resume to the snapshot. 
+  
+f- go ahead and delete the server
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% week 4 
+
+ 1- Users and groups in Linux
+	a- Introduction: Why do we need users and groups on a Linux system
+    
+  b- Create groups (groupadd command, check with cat /etc/group or tail -3 /etc/group)
+  
+  c- Create users (useradd or adduser command, check with cat /etc/passwd )
+  		- Useradd options: (-c, -g, -G, -m, -s, -D)
+      - Fields of the /etc/passwd file
+      	- Field 1: userame
+        - Field 2: where password is stored (/etc/shadow)
+        - Field 3: user account id
+        - Field 4: group id
+        - Field 5: user account description
+        - Field 6: user account home directory
+        - Field 7: Shell used
+          
+      - Types of user account on a system (system account, root account, regular user account)
+  
+  d- Delete users (userdel, userdel -r, userdel -f)
+  
+  e- Modify users (usermod with options -c, -l, -g, -G, -m, -s)
+  
+  f- Set user password (passwd)
+  		- passwd command options (-l, -u, -d)
+
+    
+2- Files and directories permissions
+
+	a- File and directory access (access denied for some users on some files)
+  
+  b- Check permissions on a file or directory
+  		- Types of permissions (read=r=4, write=w=2, execute=x=1)
+      - categories of users on which the permissions are applied (Owner=u, Group=g, Others=o)
+  
+  c- Modify permissions (chmod with letters or numbers)
+  
+  d- Change Ownership 
+  	- change group (chgrp)
+    - Change Owner (chown)
+    - change Owner and Group (chown)
+    
+ -  rw-    r--  r--   . 1  root    root   0   Jan 16 01:47 review
+    u      g    o
+    6      4    4
+    
+chmod u+rw review  ==> this will add read and write permission to the owner
+chmod u-rw review  ==> this will remove read and write permission to the owner
+
+chmod 755 review   ==> this will give the owner full permission , the group and others read and execute
+chmod 700 review   ==> this means owner full permission and group and other no permission
+chmod 400 review   ==> owner read access and group, other nothing
+chown henry review ==> change the owner of review to henry
+chgrp cloud review ==> change the group that review belongs to, to cloud
+
+project:
+  
+1- change the permission on class file to be 755
+sol: 
+  chmod 755 class
+  
+2-with the permission 755 what does that means for the file class
+
+sol: full permission to the owner ,read and execute to group and others
+  
+3- change the permission on class as followed:
+owner should have full permission,
+group should have no permission 
+other no permission
+
+sol: 
+  chmod 700 class
+  
+4- A file has permission 6 1 0 what does that mean?
+owner: rw
+group: x
+other: 0
+
+
+*** enable password authentication on aws server
+
+vi /etc/ssh/sshd_config
+:set nu
+change PasswordAuthentication no to PasswordAuthentication yes 
+
+systemctl restart sshd
+
+
+ *****week4 day2
+
+***************************Intro to cloud concept compare to on prem ************************
+
+**What is Cloud Computing?
+Cloud computing is the delivery of computing services over the internet which can mean faster 
+innovation and flexible resources for your company. In very basic terms, cloud computing is 
+when a business is able to operate part of or its entire company via the internet. 
+This can include:
+
+  - servers
+  - storage
+  - databases
+  - networking
+  - software
+
+***Benefits of Cloud Computing
+
+The following are the benefits of using cloud computing in your organization.
+
+ - Cost: the cost of using cloud computing services is a lot cheaper than having to pay for the 
+physical infrastructure needed for an office. Instead of paying for multiple computers, 
+for example, each employee can have their personal computer and access everything needed from 
+the internet.
+ - Remote work: easy to have the whole company online, without the need to have an actual office. This is often preferable for many employees, and you can have workers from all over the world instead of only from one location. Related: Best Practices for Virtual Interviews
+Innovation: with employees from all over the world you get a lot of different perspectives, 
+which can increase the amount of creativity. Being able to have innovative solutions can break you apart from the competition which can lead to your business growing in size.
+ - Scale: Businesses can grow easily when everything is done by cloud computing as it is easy 
+to do things such as share resources or data needed to do the job. With costs down due to 
+using a cloud computing system, you also have more monetary resources to get the help you 
+need for certain projects, meaning your business can become bigger at a fast pace.
+ - Collaboration: with cloud computing, collaborating becomes easy as there is a central 
+system that allows employees to see the progress of their teammates. Communication between 
+colleagues can become very easy as there are chat systems that allow teammates to communicate
+directly no matter where they are located.
+ - Data storage: it is a lot easier to store large amounts of data when you use cloud computing.
+This can be very useful, especially for businesses that need to keep records for a particular 
+amount of time or if your organization works with large data files such as high-definition photographs.
+ 
+*** cloud Risks:
+  
+Although Cloud Computing is a great innovation in the world of computing, there also exist downsides of cloud
+computing. Some of them are discussed below:
+  
+ - SECURITY & PRIVACY
+It is the biggest concern about cloud computing. Since data management and 
+infrastructure management in cloud
+is provided by third-party, it is always a risk to handover the sensitive information 
+to such providers.
+Although the cloud computing vendors ensure more secure password protected accounts, any sign of security
+breach would result in loss of clients and businesses.
+  - LOCK-IN
+  
+It is very difficult for the customers to switch from one Cloud Service Provider (CSP) to another. It results in
+dependency on a particular CSP for service.
+
+  - ISOLATION FAILURE
+This risk involves the failure of isolation mechanism that separates storage, memory, routing between the different
+tenants
+
+  - INSECURE OR INCOMPLETE DATA DELETION
+It is possible that the data requested for deletion may not get deleted. It happens either because extra copies of
+data are stored but are not available or disk destroyed also stores data from other tenants. 
+
+**** Cloud Model:
+  
+- Public Cloud
+- Private Cloud
+- Hybrid Cloud
+- Community Cloud
+- Multi-Cloud 
+
+**** cloud prividers:
+  
+as a whole, the top 10 cloud service providers globally in 2024 are Amazon Web 
+Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), Alibaba Cloud, 
+Oracle Cloud, IBM Cloud (Kyndryl), Tencent Cloud, OVHcloud, DigitalOcean, and 
+Linode (owned by Akamai). 
+
+
+*** Case study of aws:
+  
+* what is aws ?
+
+Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud,
+offering over 200 fully featured services from data centers globally. 
+Millions of customers—including the fastest-growing startups, largest enterprises, 
+and leading government agencies—are using AWS to lower costs, become more agile, 
+and innovate faster.
+
+
+
+  Project in groups:
+    
+    1- At work , we need a server build. so we need to submit info about this server to the build team.
+    we already have a server with the exact config needed.
+    go ahead and login to the existing server, and get the info needed for the new server.
+    existing server info:
+      server name : 198.58.119.40
+      username: u5bt
+      password: abc
+    
+    we need below info:
+      -number of hard drive:
+      -hard drive size:
+      -os or linux flavor and version:
+      -kernel version:
+      -Memory or ram total size:
+      -number of cpu's:
+      -is it a physical or virtual machine: ?
+      
+    
+    NB: below questions should be done on the same server 198.58.119.40 as well.
+      
+     2- run a command to check if the server is 64 bit or 32 bits
+     3- there is a file on that server named cloud-init-output.log it in the /var/log directory
+      who is the owner of this file?
+      what is the permission on that file?
+      what group does that file belongs to?
+     4- the config managment team during a troubleshooting session have asked you provide them with
+    the lines in the cloud-init-output.log file which has the word error. please go ahead and provide that.
+     5- display the content of the file study-plan located in /opt/red/dev/study/utrains and read the content displayed.
+     6- what group does study-plan belongs to?
+     7- what is the permission on study-plan?
+     8- whos is the owner of study-plan
+    
+  ********************Project to do at home***********************
+  
+  1- what is cloud computing?
+  2- what are the advantages of cloud computing?
+  3- what are some big players in the cloud computing landscape?
+  4- what is aws ?
+  5- what is a region in aws?
+  6- what is aws cli?
+  7- what is IAM in aws?
+  8- what is route 53 ?
+  9- what is vpc?
+  10- what is s3 bucket?
+  11- what is cloudwatch?
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% week 5 Terraform
+  
+  *** main.tf
+  
+  terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.61.0"
+    }
+  }
+}
+
+provider "aws" {
+  
+  region = "us-east-1"
+}
+
+resource "aws_iam_group" "developers" {
+  name = "developers"
+
+}
+
+resource "aws_iam_user" "lb" {
+  name = "serge2026"
+}
+ 
+*** code3 exercice 
+
+
+**** version.tf
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "4.61.0"
+    }
+  }
+}
+provider "aws" {
+
+  region = "us-east-1"
+}
+
+
+**** lightsail.tf
+
+resource "aws_lightsail_instance" "custom" {
+  name              = "my-apache"
+  availability_zone = "us-east-1b"
+  blueprint_id      = "amazon_linux_2"
+  bundle_id         = "nano_1_0"
+  user_data         = "sudo yum install -y httpd && sudo systemctl start httpd && sudo systemctl enable httpd && echo '<h1>Deployed via Terraform</h1>' | sudo tee /var/www/html/index.html"
+}
+
+output "instance_ip" {
+  value = aws_lightsail_instance.custom.public_ip_address
+}
+output "my-arn" {
+  value = aws_lightsail_instance.custom.arn
+}  
+
+****** Project
+
+1- in week4 folder write a terraform code that will create bellow ressources:
+- a lightsail server with apache installed and the message "This is my first terraform project " displayed 
+on the browser when the server is created.
+- a user called u5bt2023
+- a group called cloudteam
+2- we should have the public and private ip address of the lightsail server display at the end.
+
+
+%%%%%%%%%%%%% Home project %%%%%%%%%%%%%%%%%%%%
+
+
+***Terraform:
+
+1. What is Terraform, and how does it relate to Infrastructure as Code (IAC)?
+2. Explain the key benefits of using Terraform for infrastructure provisioning.
+3. What is the purpose of the Terraform state file?
+4. How do you initialize a Terraform configuration in a directory?
+5. What are Terraform providers, and can you provide an example of some providers?
+6. What is a resource in Terraform, and how is it defined?
+7. what does terraform validate do? 
+8. what is the output block in terraform?
+9. what is the terraform block for? 
+10. what does the terraform output command do?
+11. What is the purpose of the `terraform plan` command?
+12. What is the `terraform apply` command used for?
+13. How do you destroy resources created by Terraform?
+14. what is terraform module?
+15. why is it not a good practice to modify the statefile manually?
+16. everytime in the team, people need lightsail server and we need to create it manually in aws
+this process is error prone and not easilly repeatable. propose a solution to automate this.
+17- write a terraform code that will be used to create lightsail server as follow:
+
+availability zone: us-east-1a
+blueprint:  ubuntu_18_04
+bundle : medium_1_0
+name: dev server
+user data: 
+    #!/bin/bash
+    sudo apt-get update
+    sudo apt-get install -y apache2
+    sudo systemctl start apache2
+    sudo systemctl enable apache2
+    echo '<h1>This is deployed by Serge </h1>' | sudo tee /var/www/html/index.html 
+    
+( change serge with your name)
+we should be able to have the public and private ip display,
+
+**** process managment:
+1- what is the PID of a process?
+2- what is an orphan process?
+3- what is a zombie process?
+4- how would you kill a process?
+5- A server at work has a problem and you need to investigate.
+login to this server and answer below question:
+
+server info:
+      server name : 198.58.119.40
+      username: u5bt
+      password: abc
+  
+a- check what user is running python3 program on the system? what is the first and last name of that user?
+b- what is the process id of that process?
+c- there is a program running on that server using port 8000 what program is that? who is running it ?
+and what is the process id?
+d- what transport protocol is configured on that port ?
+
+cd ..
+mkdir week6-clone 
+286  cd week6-clone/
+  287  git clone https://github.com/kserge2001/week6-git.git
+  288  ls
+  289  cd week6-git
+  290  ls
+  291  code version.tf
+  292  code main.tf
+  
+  *** main.tf
+  
+  resource "aws_lightsail_instance" "server1" {
+  name = "dev-server"
+  blueprint_id = "ubuntu_18_04"
+  bundle_id = "medium_1_0"
+  availability_zone = "us-east-1a"
+  user_data = <<-EOF
+              #!/bin/bash
+              sudo apt-get update
+              sudo apt-get install -y apache2
+              sudo systemctl start apache2
+              sudo systemctl enable apache2
+              echo '<h1>This is deployed by Serge </h1>' | sudo tee /var/www/html/index.html
+              sudo useradd serge 
+              EOF
+}
+  
+*** output.tf
+
+output "pip" {
+  value = aws_lightsail_instance.server1.public_ip_address
+}
+
+output "privip" {
+  value = aws_lightsail_instance.server1.private_ip_address
+}
+
+ git add .
+git commit -m "lightsail"
+git push origin ticket1
+
+*** terraform default gitignore file
+
+https://github.com/github/gitignore/blob/main/Terraform.gitignore
+  
+
+%%%%%%%%%%%%%%%%%%%%%% Projects to do at home
+
+1- 
+a- what is vcs? and why do companies need it ?
+b- what is git ?
+c- What is the difference between Git and GitHub
+d- Explain the basic Git workflow?.
+e- What is a Git repository?
+f- How do you create a new Git branch?
+g- What is a Git commit?
+i- how do you solve a git push conflict?
+j- list some git command you have used.
+k- How do you undo the last Git commit?
+l- What is a PR ( pull request) ?
+
+2- on the repo week6-terraform-git in github, the region needs to be us-east-2 please go ahead and make the change
+3- You receive a ticket to add terraform code on week6-terraform-git repository to create user called ansible 
+and group call ansiblegroup
+go ahead and do that on a branch called homeproject, push your changes to gihub, create a pull request 
+and merge the changes to main branch.
+4- give 4 reasons why every team should consider using a VCS
+6- what is the difference between git and svn?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bash shell script
+
+sudo -i 
+yum install -y git
+git clone https://github.com/utrains/utrains_shell_script.git
+cd utrains_shell_script
+vi serge.sh
+echo "hello world"
+sleep 3
+echo " I am learning bash script"
+
+esc :wq
+  
+chmod +x serge.sh
+./serge.sh
+
+
+#!/bin/bash
+
+echo "hello world"
+sleep 3
+echo " I am learning bash script"
+
+**** system_inventory.sh
+
+#!/bin/bash                            
+                            
+                            
+# Description: system full inventory                            
+# by Serge k , feb 2024                            
+                            
+                            
+                            
+echo "Below find the number of cpu:"
+sleep 3
+nproc                            
+                            
+echo "memory info " 
+sleep 3
+free -m                             
+                            
+echo "Kernel version below"
+sleep 3
+uname -r                             
+echo "Below hard drive info"
+sleep 3
+lsblk
+
+*** pkg.sh
+
+#!/bin/bash
+
+#Author : Utrains
+    #Date : 01-Nov-2021
+
+## ---------- script that Install some packages in Linux -----------------
+
+echo "Install packages packages please wait ..."
+sleep 3
+
+yum install finger -y
+yum install curl -y
+yum install zip -y
+yum install vim -y
+  
+****Project: Splunk is a software used for real time machine data processing.
+  to install it , we follow bellow steps:
+   
+# Download the Splunk Enterprise tar file
+cd  /opt
+sudo yum -y install wget 
+sudo wget -O splunk-9.0.4.1-419ad9369127-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.0.4.1/linux/splunk-9.0.4.1-419ad9369127-Linux-x86_64.tgz"
+
+# Extract the tar file to /opt
+sudo tar -zxvf splunk-9.0.4.1-419ad9369127-Linux-x86_64.tgz -C /opt
+
+sudo rm -rf splunk-9.0.4.1-419ad9369127-Linux-x86_64.tgz
+
+cd splunk/bin/
+# Start Splunk Enterprise and set up the admin user and password
+sudo ./splunk start --accept-license --answer-yes --no-prompt --seed-passwd "abcd1234"
+
+#enable splunk at the startup
+sudo ./splunk enable boot-start
+# open splunk on the browser, thru port 8000 and login to check if everything works
+# username= admin  and password = abcd1234 ( this can be change in the script.)
+
+Go ahead and write a bash shell script to automate this process.
+
+** return code 
+after each command the special variable ? carries the exit code 
+if the return/exit code is 0 then the command succeeded and if the exit code or return code is something else 
+then it means the command failed.
+example:
+  ls   # successful command 
+  echo $? will give 0 
+  lscpiu  # failed command
+  echo $?  will give 127 
+  
+  
+**** game.sh
+
+#!/bin/bash
+
+
+
+winning_number=10
+
+echo "welcome to 1xbet! good luck !!"
+sleep 3
+
+read -p "Please enter a choice between (1-1000)" USER_CHOICE
+
+
+if [ $USER_CHOICE -eq  $winning_number ] 
+
+then
+
+echo "Congratulation you won!!!"
+
+else 
+echo "Sorry come back when you make more money"
+
+fi
+
+**** game.sh
+
+#!/bin/bash
+
+
+
+winning_number=10
+
+echo "welcome to 1xbet! good luck !!"
+sleep 3
+
+read -p "Please enter a choice between (1-1000)" USER_CHOICE
+
+
+if [ $USER_CHOICE -eq  $winning_number ]
+
+then
+
+echo "Congratulation you won!!!"
+
+elif [ $USER_CHOICE -lt $winning_number ]
+
+then
+echo "Your choise is less than the winning number please try again"
+
+elif [ $USER_CHOICE -gt $winning_number ]
+
+then
+
+echo "Please choose a lower number "
+
+else
+echo "Sorry come back when you make more money"
+
+fi
+
+
+
+*** Project:
+  
+  at work, we have requests for jenkins installation on centos 7. and to do it ,
+  we follow a document. the problem with that is; errors and time wasted.
+  we need to automate the process using a bash shell script. Go ahead and write the script for it
+  Below are the steps followed for the installation:
+    
+sudo yum update -y
+
+sudo yum -y wget 
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+sudo yum upgrade -y
+
+## install And Enable Docker
+sudo yum install docker -y
+sudo service docker start 
+sudo systemctl enable docker.service
+
+sudo chmod 777  /var/run/docker.sock
+
+
+## install Git
+sudo yum install git -y
+yum install unzip -y
+
+## Install Java 11:
+#sudo amazon-linux-extras install java-openjdk11 -y
+
+sudo yum install java-11* -y
+## Install Jenkins then Enable the Jenkins service to start at boot :
+sudo yum install jenkins -y
+sudo systemctl enable jenkins
+
+## Start Jenkins as a service:
+sudo systemctl start jenkins
+
+## Display Initial Jenkins Password
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword  
+## Take ip to the browser and access it on port 8080 ( example: 198.40.2.78:8080 )
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%% week7 
+  
+  Terraform code
+  
+*** version.tf
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.61.0"
+    }
+  }
+}
+
+provider "aws" {
+  
+  region = "us-east-1"
+}
+
+**** main.tf
+
+resource "aws_instance" "server1" {
+  ami = "ami-026b57f3c383c2eec"
+  instance_type = "t2.micro"
+  tags = {
+    Name = "Terraform server"
+    Team = "DevOps"
+    env = "dev"
+  }
+  user_data = file("install.sh")
+}
+
+*** output.tf
+
+output "public_ip" {
+  value = aws_instance.server1.public_ip
+}
+output "az" {
+  value = aws_instance.server1.availability_zone
+}
+
+*** install.sh
+
+#!/bin/bash
+
+sudo yum update -y
+sudo yum install git httpd wget -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo groupadd DevOps
+sudo useradd Serge
+
+***main.tf ==> new
+
+
+resource "aws_instance" "server1" {
+  ami           = "ami-026b57f3c383c2eec"
+  instance_type = "t2.micro"
+  key_name = "week7key"
+  tags = {
+    Name = "Terraform server"
+    Team = "DevOps"
+    env  = "dev"
+  }
+  user_data = file("install.sh")
+}
+
+resource "aws_ebs_volume" "vol1" {
+  availability_zone = aws_instance.server1.availability_zone
+  size              = 10
+
+  tags = {
+    Name = "terraform volume"
+    Team = "Cloud"
+    created-by = "Terraform"
+  }
+}
+
+resource "aws_volume_attachment" "ebs_att" {
+  device_name = "/dev/sdh"
+  volume_id   = aws_ebs_volume.vol1.id
+  instance_id = aws_instance.server1.id
+}
+
+
+**** keypair.tf
+
+
+# Generates a secure private k ey and encodes it as PEM
+resource "tls_private_key" "ec2_key" {
+  algorithm = "RSA"
+  rsa_bits  = 2048
+}
+# Create the Key Pair
+resource "aws_key_pair" "ec2_key" {
+  key_name   = "week7d2"
+  public_key = tls_private_key.ec2_key.public_key_openssh
+}
+# Save file
+resource "local_file" "ssh_key" {
+  filename = "week7d2.pem"
+  content  = tls_private_key.ec2_key.private_key_pem
+}
+
+**** new output.tf
+
+output "public_ip" {
+  value = aws_instance.server1.public_ip
+}
+output "az" {
+  value = aws_instance.server1.availability_zone
+}
+
+output "ssh-command" {
+  value = "ssh -i week7d2.pem ec2-user@${aws_instance.server1.public_ip}"
+}
+
+*** new install.sh
+
+#!/bin/bash
+
+sudo yum update -y
+sudo yum install git httpd wget -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo groupadd DevOps
+sudo useradd Serge
+sudo yum install unzip  -y  #( apt install wget unzip -y )
+wget https://github.com/utrains/static-resume/archive/refs/heads/main.zip
+unzip main.zip
+cp -r static-resume-main/* /var/www/html/  
+
+*** new main.tf
+
+resource "aws_instance" "server1" {
+
+  ami           = "ami-026b57f3c383c2eec"
+  instance_type = "t2.micro"
+  security_groups = [ "web" ]
+  key_name      = "week7d2"
+  tags = {
+    Name = "Terraform server"
+    Team = "DevOps"
+    env  = "dev"
+  }
+  user_data = file("install.sh")
+}
+
+/*
+resource "aws_ebs_volume" "vol1" {
+  availability_zone = aws_instance.server1.availability_zone
+  size              = 10
+
+  tags = {
+    Name       = "terraform volume"
+    Team       = "Cloud"
+    created-by = "Terraform"
+  }
+}
+
+resource "aws_volume_attachment" "ebs_att" {
+  device_name = "/dev/sdh"
+  volume_id   = aws_ebs_volume.vol1.id
+  instance_id = aws_instance.server1.id
+}
+*/
+
+
+ssh to the server:
+  
+cd /var/www/html
+ls
+grep -in alex index.html   ==> this will display all the line with alex
+
+sudo vim index.html 
+:set nu   ==>  this is to set the line number in vi
+change Alex Smith to your_name 
+save and quit
+refresh the browser
+
+
+**** sg.tf
+
+resource "aws_security_group" "sg-demo" {
+    name = "web"
+    description = "Allow ssh and httpd"
+    
+    ingress {
+        description = "allow ssh"
+        from_port = 22
+        to_port = 22
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+    ingress {
+        description = "allow http"
+        from_port = 80
+        to_port = 80
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+    ingress {
+        description = "allow http"
+        from_port = 8080
+        to_port = 8080
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+    egress {
+        from_port = 0
+        to_port = 0
+        protocol = "-1"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+  tags= {
+    env = "Dev"
+  }
+
+  
+}
+
+********* Project:
+  
+    
+You are working in the cloud infrastructure and configuration team and as such 
+your team is working on migrating a multi tiers app fully hosted on aws.
+A lot  have been done already in terms of inventory, planning , designing the architecture for aws,
+and your team is now at the phase of creating the infrastructure in aws.
+The project is broken down into user's stories or tickets. and these tickets are in the kanban board ( jira software):
+Go ahead and use terraform to solve these tickets; dont hesitate to bring up 
+any questions that you have during our morning stand up meetings.
+                 
+  
+  
+1- Create a vpc for utc app with below specs:
+    
+  - name: utc-app1
+  - Tenancy: default 
+  - NAT Gateway: no  
+  - s3 endpoint: no                            
+  - CIDR: 172.120.0.0/16
+  - enable IPV6: No                            
+  - Enable DNS hostnames: yes
+  - Enable DNS resolution: yes                            
+  - Internet Gateway name: dev-wdp-IGW
+  - Attach the Internet Gateway to the VPC
+  - two public subnets
+  - two private subnets                            
+  - tags: {
+    Name: utc-app1
+    env:  dev
+    team: wdp
+    created by: Yourname
+  }  
+ 
+2- Create a security group for utc app:
+    name: webserver-sg
+    ports: 
+      - 22 for ssh, allow just from your ip 
+      - 80 for apache, open to the world
+      - 8080 open everywhere
+    vpc: utc-app1
+      
+3- create a ssh keypair for utc app :
+    name: utc-key
+    format: .pem
+      
+  
+4- create an ec2 instance with below specs:
+    ami: ami-06a0cd9728546d178
+    hardrive / ebs: 20g 
+    security group: webserver-sg
+    enable public ip: yes
+    key_name: utc-key
+    vpc: utc-app1
+    subnet: public-subnet-1a
+    user data: 
+   #!/bin/bash
+   sudo  yum update -y
+   sudo   groupadd docker
+   sudo   useradd John -aG docker 
+   sudo   yum install git unzip wget httpd -y
+   sudo   systemctl start httpd
+   sudo   systemctl enable httpd
+   sudo   cd /opt
+   sudo   wget https://github.com/kserge2001/web-consulting/archive/refs/heads/dev.zip
+   sudo   unzip dev.zip
+   sudo   cp -r /opt/web-consulting-dev/* /var/www/html
+      
+      tags = {
+        Name: utc-dev-inst
+        Team: Cloud Transformation
+        Environment: Dev
+        Created by: your name goes here
+      }
+      
+5- testing:
+  check the vpc and subnets
+  check the keypair
+  check the security group
+  check the instance ( login and verify that user data run)
+  Take the ip address of the instance to the browser to verify content
+
+6- create an ami of your utc-dev-inst so next time we dont need to reconfigure the instance.
+call it utc-dev-inst
+  
+7- clean-up
+  terminate the instance
+  delete security group
+  delete keypair
+  delete vpc
+  
+8- create an s3 bucket for the state file and a dynamodb table for the state file lock.
+9- push the code to github.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% week 8 Docker %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1- Introduction to virtualization
+
+	a- What is virtualization (traditional server architecture vs virtualized server architecture)
+  
+  b- What is an Hypervisor?
+  	- Hypervisor type 1
+    - Hypervisor type 2
+  
+  c- Hypervisors vendors
+   
+    - Hypervisor type 1 vendors
+      - VMware vSphere with ESX/ESXi
+			- KVM (Kernel-Based Virtual Machine)
+			- Microsoft Hyper-V
+			- Oracle VM
+			- Citrix Hypervisor (formerly known as Xen Server)
+      
+    - Hypervisor type 2 vendors
+      - Oracle VM VirtualBox
+      - VMware Workstation Pro/VMware Fusion
+			- Windows Virtual PC
+			- Parallels Desktop
+      
+  d- How to choose? (type 1 vs type 2)
+  
+2- Introduction to Docker part 1
+
+- Open Container Initiative ( OCI)  standar of how container technology should be build.
+
+-what is docker ?
+
+-why docker?
+  -little history before docker?
+  -The big problem solved by docker
+
+-what is docker Hub?
+
+-sign up to docker hub,
+
+-lab setup: 
+  -terraform: https://dataservicegroup.atlassian.net/l/cp/4nBhbiVU
+
+-some docker commands    
+  -docker --version
+  -docker info
+  -docker images
+  -docker ps
+  -docker ps -a
+
+** Images: what are those and where find them? ==>  docker hub
+
+-docker pull
+-docker images ubuntu
+-docker run ubuntu 
+-docker ps
+-docker ps -a
+
+**what are tags**
+
+- running the ubuntu container in interactive mode
+  -docker run -it [Image_id] bash
+  -run some few linux commands then exit (pwd, ls, cat,exit)
+  -docker ps
+  -docker ps -a
+
+- running container in detached mode 
+  -docker run -itd image-id
+  -docker ps
+
+- running container with specific options
+	-docker run -itd --name=giveAcontainername -p external:internal imageName
+  -difference running with -it and -itd flags
+  -docker exec command 
+  -docker attach containerID (log into a specific container)
+
+- login to docker 
+   -docker login
+
+- start/stop a container
+		- docker stop container-id
+    - docker start container-id
+    - docker ps
+
+-remove containers
+    - docker rm containerID
+    - docker rm containerID1  containerID2
+    - docker rm -f containerID
+    
+- Delete images
+    - docker rmi imageID
+  
+***** day2 Deploy Alex smith in container 
+
+wget https://github.com/utrains/static-resume/archive/refs/heads/main.zip
+unzip main.zip
+cp -r static-resume-main/* /usr/local/apache2/htdocs 
+
+     1  pwd
+    2  cd htdocs/
+    3  ls
+    4  pwd
+    5  wget https://github.com/utrains/static-resume/archive/refs/heads/main.zip
+    6  apt update
+    7  apt install wget vim unzip -y
+    8  clear
+    9  wget https://github.com/utrains/static-resume/archive/refs/heads/main.zip
+   10  history
+   11  ls
+   12  unzip main.zip
+   13  ls
+   14  ls
+   15  cp -r static-resume-main/* .
+   16  ls
+   17  history
+**** Dockerfile
+
+FROM httpd
+
+RUN apt update
+
+RUN apt install wget unzip vim -y
+
+EXPOSE 85
+RUN wget https://github.com/utrains/static-resume/archive/refs/heads/main.zip
+
+RUN unzip main.zip
+
+RUN cp -r static-resume-main/* /usr/local/apache2/htdocs 
+    
+*** build image
+
+docker build -t kserge2001/alex-img .    # replace kserge2001 with your docker hub username)
+
+
+
+*** Dockerfile
+
+FROM httpd
+
+RUN apt update
+
+RUN apt install wget unzip vim -y
+
+EXPOSE 85
+RUN wget https://github.com/utrains/static-resume/archive/refs/heads/main.zip
+
+RUN unzip main.zip
+
+RUN cp -r static-resume-main/* /usr/local/apache2/htdocs
+RUN apt remove wget vim unzip -y
+RUN rm -rf static-resume-main main.zip
+
+
+78  vim Dockerfile
+   79  clear
+   80  docker build -t kserge2001/alex-img:2.0 .
+   81  docker images
+   82  docker build -t kserge2001/alex-img:2.0 .
+   83  docker images
+   84  docker push kserge2001/alex-img:2.0
+   85  history
+  
+  docker rm -f $(docker ps -a -q)   # this will remove all containers
+  docker rmi -f $(docker images -q) # this will remove all images
+  
+  
+***** project
+
+https://dataservicegroup.atlassian.net/wiki/spaces/LAT/pages/2219409409/Containerize+a+python+application
+ 
+
+%%%% Docker Interview questions
+
+1- what is docker?
+2- why use docker?
+3- what is a virtual machine?
+4- what is the difference between virtual machine and a docker container ?
+5- what is the difference between an image and a container?
+6- what are some features of docker?
+7- what is a dockerfile?
+8- what are some instructions used in the dockerfile?
+9- what is a docker registry?
+10- what is docker compose? 
+11- what is docker network? ( give example of networks )
+12- How would make the data in the container persistent? 
+13- How would you troubleshoot a container ?
+14- what is the purpose of docker-compose.yaml?
+15- what is docker swarm?
+16- what are some best security practices when dealing with containers.?
+17- what are some docker command you have used ?
+
+%%%%%%%%%%%%%% week9
+
+*** version.tf
+
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.61.0"
+    }
+  }
+}
+
+provider "aws" {
+  
+  region = "us-east-1"
+}
+
+*** Lamp configuration steps
+
+https://dataservicegroup.atlassian.net/wiki/spaces/LAT/pages/2218459137/LAMP+Stack+installation+on+a+Linux+machine
+****main.tf
+
+# Generates a secure private k ey and encodes it as PEM
+resource "tls_private_key" "lightsail_key" {
+  algorithm = "RSA"
+  rsa_bits  = 2048
+}
+# Create the Key Pair
+resource "aws_lightsail_key_pair" "lightsail_key2" {
+  name   = "lamp"
+  public_key = tls_private_key.lightsail_key.public_key_openssh
+}
+# Save file
+resource "local_file" "ssh_key" {
+  filename = "lamp.pem"
+  content  = tls_private_key.lightsail_key.private_key_pem
+}
+
+resource "aws_lightsail_instance" "server1" {
+  name = "lamp-server"
+  blueprint_id = "centos_7_2009_01"
+  bundle_id = "medium_1_0"
+  availability_zone = "us-east-1a"
+  key_pair_name = "lamp"
+}
+
+
+*** output.tf
+
+output "public" {
+  value = aws_lightsail_instance.server1.public_ip_address
+}
+output "username" {
+  value = aws_lightsail_instance.server1.username
+}
+
+output "ssh-command" {
+  value = "ssh -i ${local_file.ssh_key.filename} ${aws_lightsail_instance.server1.username}@${aws_lightsail_instance.server1.public_ip_address}"
+}
+
+%%%%%%%%%%%% week 9d2
+
+git clone https://github.com/utrains/docker-Lab.git
+cd docker-Lab
+terraform init
+terraform plan
+terraform apply --auto-approve
+
+*** Docker Compose
+
+
+
+** To make two container talk , we need to isolate them in the same network.
+docker network ls
+docker network create net 
+docker run -d --rm --network net -e MARIADB_ROOT_PASSWORD=abc123 -e MARIADB_DATABASE=webserver -e MARIADB_USER=oracle -e MARIADB_PASSWORD=abc123 --name mariadb mariadb:latest
+docker run -d --rm --name wordpress1 -p 80:80 --network net  -e WORDPRESS_DB_HOST=mariadb -e WORDPRESS_DB_USER=oracle -e WORDPRESS_DB_PASSWORD=abc123 -e WORDPRESS_DB_NAME=webserver wordpress
+** It is stidious to manage container individually so best solution to run them is using docker-compose tool.
+
+** Use docker compose 
+
+
+version: '3'
+services:
+  wordpress:
+    depends_on:
+        - mysql
+    image: wordpress:4.9.4-php7.2-apache
+    #container_name: wordpress
+    restart: always
+    environment:
+        - WORDPRESS_DB_USER=root
+        - WORDPRESS_DB_PASSWORD=db_password
+        - WORDPRESS_DB_HOST=mysql
+        - WORDPRESS_DB_NAME=webserver
+    ports:
+        - 80:80
+    networks:
+        - web
+    volumes:
+        - wordpressdata:/var/www/html
+  mysql:
+    image: mariadb:10.4.12
+    #container_name: db
+    environment: 
+        - MYSQL_ROOT_PASSWORD=db_password
+        - MYSQL_USER=wp_user
+        - MYSQL_PASSWORD=wp_password
+        - MYSQL_DATABASE= webserver
+    networks:
+        - web
+    command: '--default-authentication-plugin=mysql_native_password'
+    volumes:
+        - database:/var/lib/mysql
+networks:
+    web:
+      driver: bridge
+volumes:
+    wordpressdata:
+    database:
+
+      
+docker-compose up -d 
+docker-compose ps
+
+****route53.tf
+
+resource "aws_route53_record" "rc1" {
+  zone_id = "Z0889945UE3027Z54R69"
+  type = "A"
+  ttl = 300
+  name = "resume.utrains.info"
+  records = [ aws_lightsail_instance.server1.public_ip_address ]
+}
+
+*** resume.sh
+
+#!/bin/bash
+
+sudo yum update -y
+sudo yum install git httpd wget -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+# sudo groupadd DevOps
+# sudo useradd Serge
+sudo yum install unzip  -y  #( apt install wget unzip -y )
+wget https://github.com/utrains/static-resume/archive/refs/heads/main.zip
+unzip main.zip
+cp -r static-resume-main/* /var/www/html/
+exit(0)
+
+*** output.tf
+output "public" {
+  value = aws_lightsail_instance.server1.public_ip_address
+}
+output "username" {
+  value = aws_lightsail_instance.server1.username
+}
+
+output "ssh-command" {
+  value = "ssh -i ${local_file.ssh_key.filename} ${aws_lightsail_instance.server1.username}@${aws_lightsail_instance.server1.public_ip_address}"
+}
+output "dns-name" {
+  value = aws_route53_record.rc1.name
+}
+
+
+*** my github repo 
+https://github.com/kserge2001/week9-lamp.git
+
+**** Project A:
+
+
+1- what is docker?
+2- what is a virtual machine?
+3- what is the difference between virtual machine and docker ?
+4- what is the difference between an image and a container?
+5- what are some features of docker?
+6- what is a dockerfile?
+7- what is a docker registry?
+8- what is docker compose? 
+9- what id docker network?
+10- How would make the data in the container persistent? 
+11- How would you troubleshoot a container ?
+12- what is the purpose of docker-compose.yaml?
+13- what is docker swarm?
+14- what are some best security practices when dealing with containers.?
+15- what are some docker command you used ?  
+
+*** Project B:
+  
+You are working in the cloud infrastructure and configuration team and as such 
+your team is working on migrating a multi tiers app fully hosted on aws.
+A lot  have been done already in terms of understanding the requirements, planning , designing the architecture for aws,
+and your team is now at the phase of creating the infrastructure in aws.
+The project is broken down into user's stories or tickets. and these tickets are in the kanban board ( jira software):
+Go ahead and use terraform to solve these tickets; dont hesitate to bring up 
+any questions that you have during our morning stand up meetings.
+                 
+  
+  
+1- Create a vpc for utc app with below specs:
+    
+  - name: utc-app1
+  - Tenancy: default 
+  - NAT Gateway: no  
+  - s3 endpoint: no                            
+  - CIDR: 172.120.0.0/16
+  - enable IPV6: No                            
+  - Enable DNS hostnames: yes
+  - Enable DNS resolution: yes                            
+  - Internet Gateway name: dev-wdp-IGW
+  - Attach the Internet Gateway to the VPC
+  - two public subnets
+  - two private subnets                            
+  - tags: {
+    Name: utc-app1
+    env:  dev
+    team: wdp
+    created by: Yourname
+  }  
+ 
+2- Create a security group for utc app:
+    name: webserver-sg
+    ports: 
+      - 22 for ssh, allow just from your ip 
+      - 80 for apache, open to the world
+      - 8080 open everywhere
+    vpc: utc-app1
+      
+3- create a ssh keypair for utc app :
+    name: utc-key
+    format: .pem
+      
+  
+4- create an ec2 instance with below specs:
+    ami: ami-06a0cd9728546d178
+    hardrive / ebs: 20g 
+    security group: webserver-sg
+    enable public ip: yes
+    key_name: utc-key
+    vpc: utc-app1
+    subnet: public-subnet-1a
+    user data: 
+   #!/bin/bash
+   sudo  yum update -y
+   sudo   groupadd docker
+   sudo   useradd John -aG docker 
+   sudo   yum install git unzip wget httpd -y
+   sudo   systemctl start httpd
+   sudo   systemctl enable httpd
+   sudo   cd /opt
+   sudo   wget https://github.com/kserge2001/web-consulting/archive/refs/heads/dev.zip
+   sudo   unzip dev.zip
+   sudo   cp -r /opt/web-consulting-dev/* /var/www/html
+      
+      tags = {
+        Name: utc-dev-inst
+        Team: Cloud Transformation
+        Environment: Dev
+        Created by: your name goes here
+      }
+      
+5- testing:
+  check the vpc and subnets
+  check the keypair
+  check the security group
+  check the instance ( login and verify that user data run)
+  Take the ip address of the instance to the browser to verify content
+
+6- create an ami of your utc-dev-inst so next time we dont need to reconfigure the instance.
+call it utc-dev-inst
+  
+7- clean-up
+  terminate the instance
+  delete security group
+  delete keypair
+  delete vpc
+8- This is on one project, and tomorrow or in the future, we will need to do the same and 
+This manual process is very painfull!
+For these reasons:
+   
+a. Human Error: Manual processes are prone to human error. Mistakes in configuration, 
+installation, or updates can lead to system failures, security vulnerabilities, or data loss.
+
+b. Inconsistency: 
+Manual configurations can lead to inconsistencies across different environments 
+(such as development, staging, and production). These inconsistencies can cause 
+unexpected behavior when deploying applications or making changes.
+
+c. Lack of Documentation: Manual changes often lack proper documentation, 
+making it difficult for other team members to understand and replicate the configurations. 
+This lack of documentation can hinder troubleshooting and future modifications.
+
+d. Difficulty in Scaling: Manually managing infrastructure becomes increasingly challenging 
+as the scale of the infrastructure grows. Managing a few servers manually might be feasible,
+but as the number of servers, databases, and services increases, manual configurations become unmanageable.
+
+e. Limited Visibility: Manual processes lack centralized visibility into the state of the 
+infrastructure. Without proper monitoring and logging, identifying issues and troubleshooting
+problems becomes time-consuming and challenging.
+
+f. Security Risks: Manual processes might overlook security best practices, 
+leading to vulnerabilities. Automated tools like Terraform can enforce security policies 
+consistently, reducing the risk of misconfigurations.
+
+g. Dependency Management: Manually managing dependencies between different components 
+and services is complex and error-prone. Automated tools can handle dependency management 
+more efficiently.
+
+h. Slow Deployment: Manual processes often involve multiple steps and approvals, 
+leading to slow deployment cycles. Automated solutions can significantly speed up the 
+deployment process, allowing for faster iterations and updates.
+
+i. Limited Rollback Capability: In case of failures during manual updates, rolling back 
+to a previous stable state can be difficult and time-consuming. Automated tools often 
+provide easy rollback mechanisms.
+
+j. Compliance Challenges: Meeting regulatory and compliance requirements is harder with 
+manual processes. Automated tools can enforce compliance policies consistently, 
+ensuring that the infrastructure adheres to the necessary standards.
+
+k. Difficulty in Reproducibility: It can be challenging to reproduce a specific configuration
+or environment exactly as it was manually configured, leading to difficulties in testing, 
+development, and troubleshooting.
+
+What can you propose to mitigate these challenges and improve efficiency, reliability, 
+and security in managing the infrastructure. ? 
+
+9- create an s3 bucket for the state file and a dynamodb table for the state file lock.
+10- push the code to github.
+  
+
+%%%%%%%%%%%%%%%%%%% week 10
+
+** vpc.tf
+
+resource "aws_vpc" "vpc1" {
+ cidr_block = "192.168.0.0/16" 
+ instance_tenancy = "default"
+ tags = {
+    Name = "Terraform-vpc"
+    env = "dev"
+    Team = "DevOps"
+ }
+}
+resource "aws_internet_gateway" "gwy1" {
+  vpc_id = aws_vpc.vpc1.id
+}
+# public subnet
+resource "aws_subnet" "public1" {
+    availability_zone = "us-east-1a"
+    cidr_block = "192.168.1.0/24"
+    map_public_ip_on_launch = true
+    vpc_id = aws_vpc.vpc1.id
+    tags={
+        Name = "public-subnet-1"
+        env = "dev"
+    }
+  
+}
+resource "aws_subnet" "public2" {
+    availability_zone = "us-east-1b"
+    cidr_block = "192.168.2.0/24"
+    vpc_id = aws_vpc.vpc1.id
+    map_public_ip_on_launch = true
+    tags={
+        Name = "public-subnet-2"
+        env = "dev"
+    }
+  
+}
+#Private subnet
+
+resource "aws_subnet" "private1" {
+    availability_zone = "us-east-1a"
+    cidr_block = "192.168.3.0/24"
+    vpc_id = aws_vpc.vpc1.id
+    tags={
+        Name = "private-subnet-1"
+        env = "dev"
+    } 
+}
+resource "aws_subnet" "private2" {
+    availability_zone = "us-east-1b"
+    cidr_block = "192.168.4.0/24"
+    vpc_id = aws_vpc.vpc1.id
+    tags={
+        Name = "private-subnet-2"
+        env = "dev"
+    }
+  
+}
+#Elastic ip and Nat gateway
+resource "aws_eip" "eip" {
+  
+}
+resource "aws_nat_gateway" "nat1" {
+  allocation_id = aws_eip.eip.id
+  subnet_id = aws_subnet.public1.id
+}
+#Public route table
+
+resource "aws_route_table" "rtpublic" {
+ vpc_id = aws_vpc.vpc1.id 
+ route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.gwy1.id
+ }
+}
+
+#Private route
+
+resource "aws_route_table" "rtprivate" {
+ vpc_id = aws_vpc.vpc1.id 
+ route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_nat_gateway.nat1.id
+ }
+}
+
+## Subnet association
+
+resource "aws_route_table_association" "rta1" {
+  subnet_id = aws_subnet.private1.id
+  route_table_id = aws_route_table.rtprivate.id
+}
+resource "aws_route_table_association" "rta2" {
+  subnet_id = aws_subnet.private2.id
+  route_table_id = aws_route_table.rtprivate.id
+}
+
+resource "aws_route_table_association" "rta3" {
+  subnet_id = aws_subnet.public1.id
+  route_table_id = aws_route_table.rtpublic.id
+}
+resource "aws_route_table_association" "rta4" {
+  subnet_id = aws_subnet.public2.id
+  route_table_id = aws_route_table.rtpublic.id
+}
+
+
+*** backend.tf
+
+terraform {
+  backend "s3" {
+    bucket         = "your bucket name"
+    key            = "test/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "your dynameDB table name"
+  }
+}
+
+*** sg.tf
+
+resource "aws_security_group" "sg1" {
+    name = "Terraform-sg"
+    description = "Allow ssh and httpd"
+    vpc_id = aws_vpc.vpc1.id
+    
+    
+    ingress {
+        description = "allow http"
+        from_port = 80
+        to_port = 80
+        protocol = "tcp"
+        #cidr_blocks = ["0.0.0.0/0"]
+        security_groups = [ aws_security_group.sg2.name ]
+    }
+    egress {
+        from_port = 0
+        to_port = 0
+        protocol = "-1"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+  tags= {
+    env = "Dev"
+    created-by-terraform = "yes"
+  }
+
+  
+}
+resource "aws_security_group" "sg2" {
+    name = "Terraform-sg-lb"
+    description = "Allow ssh and httpd"
+    vpc_id = aws_vpc.vpc1.id
+    
+    ingress {
+        description = "allow http"
+        from_port = 80
+        to_port = 80
+        protocol = "tcp"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+    egress {
+        from_port = 0
+        to_port = 0
+        protocol = "-1"
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+  tags= {
+    env = "Dev"
+  } 
+}
+
+*** ec2.tf
+
+resource "aws_instance" "server1" {
+  ami = "ami-02d7fd1c2af6eead0"
+  instance_type = "t2.micro"
+  vpc_security_group_ids = [ aws_security_group.sg1.id ]
+  availability_zone = "us-east-1a"
+  subnet_id = aws_subnet.private1.id
+  user_data = file("code.sh")
+  tags={
+    Name = "webserver-1"
+  }
+
+}
+resource "aws_instance" "server2" {
+  ami = "ami-02d7fd1c2af6eead0"
+  instance_type = "t2.micro"
+  vpc_security_group_ids = [ aws_security_group.sg1.id ]
+  availability_zone = "us-east-1b"
+  subnet_id = aws_subnet.private2.id
+  user_data = file("code.sh")
+  tags={
+    Name = "webserver-2"
+  }
+
+}
+*** code.sh
+
+#!/bin/bash
+
+sudo yum update -y
+sudo yum install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+echo "<html><h1><p> Welcome to Utrains the place to learn DevOps!!.<br> This traffic is servered from:  ${HOSTNAME} </p></h1></html>" > /var/www/html/index.html
+
+*** alb.tf
+
+resource "aws_lb_target_group" "alb-target-group" {
+  name     = "application-lb-tg"
+  port     = 80
+  protocol = "HTTP"
+  vpc_id   = aws_vpc.vpc1.id 
+
+  health_check {
+    enabled             = true
+    healthy_threshold   = 3
+    interval            = 10
+    matcher             = 200
+    path                = "/"
+    port                = "traffic-port"
+    protocol            = "HTTP"
+    timeout             = 6
+    unhealthy_threshold = 3
+  }
+}
+resource "aws_lb_target_group_attachment" "attach-app" {
+  target_group_arn = aws_lb_target_group.alb-target-group.arn 
+  target_id        = aws_instance.server1.id 
+  port             = 80
+}
+resource "aws_lb_target_group_attachment" "attach-app" {
+  target_group_arn = aws_lb_target_group.alb-target-group.arn 
+  target_id        = aws_instance.server2.id 
+  port             = 80
+}
+resource "aws_lb_listener" "alb-http-listener" {
+    load_balancer_arn = aws_lb.application-lb.arn
+    port              = "80"
+    protocol          = "HTTP"
+  
+    default_action {
+      type             = "forward"
+      target_group_arn = aws_lb_target_group.alb-target-group.arn
+    }
+  }
+resource "aws_lb" "application-lb" {
+  name               = "application-lb"
+  internal           = false
+  load_balancer_type = "application"
+  security_groups    = [aws_security_group.sg2.id] 
+  subnets            = [aws_subnet.public1.id, aws_subnet.public2.id]
+
+  enable_deletion_protection = false
+
+  tags = {
+    Environment = "application-lb"
+    Name        = "Application-lb"
+    
+  }
+}
+
+*** output.tf
+output "dns-link" {
+ value = aws_lb.application-lb.dns_name
+}
+
+
+%%%%% week10 day2
+
+*** infracost setup  ( https://www.infracost.io/docs/ )
+
+Infracost enables a shift-left approach for cloud costs by providing cost estimates for 
+Terraform before deployment. Additionally, it can check for FinOps best practices in 
+accordance with the Well-Architected Frameworks of cloud vendors, and your company's 
+required tag keys/values. This not only saves your team money but also streamlines 
+discussions about costs within the engineering workflow rather than it being a post-deployment 
+consideration.
+
+*** Mac
+brew install infracost
+
+*** Windows 
+choco install infracost
+
+** check ervion
+
+infracost --version
+
+*** set api token
+
+infracost auth login
+
+*** infrastructure cost 
+
+infracost breakdown --path . 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% week11
+
+import boto3
+
+def lambda_handler(event, context):
+    s3 = boto3.client('s3')
+    response = s3.list_buckets()
+    buckets = [bucket['Name'] for bucket in response['Buckets']]
+    print("List of S3 buckets:")
+    for bucket in buckets:
+        print(bucket)
+
+        
+ 
+
+#!/bin/bash
+sudo yum install wget httpd mysql php php-mysql -y
+sudo wget https://wordpress.org/latest.tar.gz
+sudo tar -xzf latest.tar.gz
+sudo cp -r wordpress/* /var/www/html
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+sudo cd /var/www/html
+sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
+sudo chown -R apache:apache /var/www/html
+sudo systemctl start httpd 
+sudo systemctl enable httpd
+
+
+sudo vim /var/www/html/wp-config.php
+
+db_name: webserver
+db_username: admin
+db_password: admin1234
+db_host: <rds endpoint>
+
+*************** Project
+
+1- what is aws?
+2- why cloud computing?
+3- describe some of the things you have done in aws
+4- how would you secure an app in aws?
+5- describe the architechture of an 3 tier app in aws
+6- what is serverless architechture?
+7- what is the difference between ebs and s3 storage?
+8- what is the security group?
+9- what is vpc?
+10- what is the difference between a private and a public vpc?
+11- how do we represent the DMZ network in aws?
+12- How would you automate the cloud infrastructure?
+13- in a migration project to aws , what role do you play? ( week10)
+14- what is terraform?
+15- what is terraform remote backend?
+16- go ahead an implement terraform in your team.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% week12
+
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.61.0"
+    }
+  }
+}
+
+provider "aws" {
+  
+  region = "us-east-1"
+}
+
+data "aws_instance" "ec21" {
+  instance_id = "i-0c9081dec94e3aa26"
+}
+
+resource "aws_instance" "demo" {
+  ami = data.aws_instance.ec21.ami
+  instance_type = data.aws_instance.ec21.instance_type
+  key_name = data.aws_instance.ec21.key_name
+}
+
+
+*** data.tf
+
+data "aws_ami" "ami1" {
+  most_recent      = true
+  owners           = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-kernel-5.10-hvm*-x86_64-ebs"]
+  }
+
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+
+terraform plan -generate-config-out=main.tf
+
+
+**** main.tf
+
+resource "aws_instance" "web" {
+  ami                                  = "ami-033a1ebf088e56e81"
+  associate_public_ip_address          = true
+  availability_zone                    = "us-east-1b"
+  instance_type                        = "t2.micro"
+  ipv6_address_count                   = 0
+  key_name                             = "wordpress"   # this should be the one generated in your screen
+  monitoring                           = false
+  security_groups                      = ["launch-wizard-1"]  # this should be the one generated in your screen
+  subnet_id                            = "subnet-5594bd74"   # this should be the one generated in your screen
+  tags = {
+    Name = "webserver"
+  }
+  
+  
+}
+
+**** day 2
+
+meta arguments :
+  * count
+  * lifecycle
+  * for_each
+  * depend_on
+  
+  ===========> count :
+    - count is a meta-argument defined by the Terraform language. 
+    - It can be used with modules and with every resource type.
+    - The count meta-argument accepts a whole number, and creates that many instances of the resource or module.
+    Exp : create 2 sames instance of an ec2
+      
+resource "aws_instance" "server" {
+  count = 2 
+
+  ami           = "ami-a1b2c3d4"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "Server ${count.index}"
+  }
+}
+
+  ===========> lifecycle : 
+    - Lifecycle arguments help control the flow of your Terraform operations by creating custom rules for resource creation and destruction.
+    - he arguments available within a lifecycle block are : 
+      * create_before_destroy, 
+      * prevent_destroy, 
+      * ignore_changes, 
+      * replace_triggered_by.
+      Exp : 
+
+resource "aws_instance" "server" {
+  count = 2 
+
+  ami           = "ami-a1b2c3d4"
+  instance_type = "t2.micro"
+
+	lifecycle {
+    prevent_destroy = true
+  }
+ 
+}
+
+Note : The prevent_destroy attribute is useful in situations where a change to an attribute would force a replacement and create downtime.
+  
+  ===========>  depend_on
+	- Use the depends_on meta-argument to handle hidden resource or module dependencies that Terraform cannot automatically infer. 
+	- You only need to explicitly specify a dependency when a resource or module relies on another resource's behavior but does not access any of that resource's data in its arguments.
+ 
+
+*************  Terraform propvisioner 
+- You can use provisioners to model specific actions on the local machine or on a remote machine in order to prepare servers or other infrastructure objects for service.
+*remote-exec
+* local-exec
+* file
+
+====> remote-exec  ==> execute command on target server
+Example 1 : provision a web server in an aws_instance resource block, using remote-exec
+===============================
+connection {
+   type        = "ssh"
+   user        = "ec2-user"
+   private_key = file("~/.ssh/id_rsa")
+   host        = self.public_ip
+   }
+ 
+provisioner "remote-exec" {
+   inline = [
+     "sudo yum -y install httpd && sudo systemctl start httpd",
+     "echo '<h1>My Test Website using Terraform Provisioner</h1>' > index.html",
+     "sudo mv index.html /var/www/html/"
+   ]
+}
+
+
+
+====> local-exec
+Example 2 : create a local file called ip_address.txt, then put in it the ip address of an ec2 instance when this instance is created
+===============================
+provider "aws" {
+  profile    = "default"
+  region     = "us-west-2"
+}
+
+resource "aws_instance" "my_ec2" {
+  ami           = "ami-06ffade19910cbfc0"
+  instance_type = "t2.micro"
+
+  provisioner "local-exec" {
+    command = "echo ${aws_instance.my_ec2.public_ip} > ip_address.txt"
+	}
+  
+}
+
+
+====> file 
+Example 2 : Copies the configs.d folder to /etc/configs.d
+===============================
+provisioner "file" {
+source = "conf/configs.d"
+destination = "/etc"
+}
+
+  
+=====> null ressource  (empty resource container used when we do not want to create a specific resource.)
+Example 1 : make ssh connexion, using null_resource and private_key
+  
+
+  
+  
+  resource "aws_instance" "server1" {
+  ami = "ami-033a1ebf088e56e81"
+  instance_type = "t3.small"
+  key_name = "wordpress"
+}
+
+  
+ terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.61.0"
+    }
+  }
+}
+
+provider "aws" {
+  
+  region = "us-east-1"
+}
+
+# Generated the secure key and encrypted to PEM format
+resource "tls_private_key" "my_ec2_key" {
+  algorithm = "RSA"
+  rsa_bits = 2048
+}
+# Create aws key pair component in aws
+resource "aws_key_pair" "ec2_key" {
+  key_name = "week12key"
+  public_key = tls_private_key.my_ec2_key.public_key_openssh
+}
+# Save my key pair file to current working directory
+resource "local_file" "ssh_key" {
+   filename = "${aws_key_pair.ec2_key.key_name}.pem"
+   content = tls_private_key.my_ec2_key.private_key_pem
+}
+
+resource "aws_instance" "demo1" {
+  ami = "ami-033a1ebf088e56e81"
+  instance_type = "t2.micro"
+  key_name = "week12key"
+
+} 
+
+**** main.tf
+
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.61.0"
+    }
+  }
+}
+
+provider "aws" {
+  
+  region = "us-east-1"
+}
+
+# Generated the secure key and encrypted to PEM format
+resource "tls_private_key" "my_ec2_key" {
+  algorithm = "RSA"
+  rsa_bits = 2048
+}
+# Create aws key pair component in aws
+resource "aws_key_pair" "ec2_key" {
+  key_name = "week12key"
+  public_key = tls_private_key.my_ec2_key.public_key_openssh
+}
+# Save my key pair file to current working directory
+resource "local_file" "ssh_key" {
+   filename = "${aws_key_pair.ec2_key.key_name}.pem"
+   content = tls_private_key.my_ec2_key.private_key_pem
+}
+
+resource "aws_instance" "demo1" {
+  ami = "ami-033a1ebf088e56e81"
+  instance_type = "t2.micro"
+  key_name = "week12key"
+  
+}
+
+resource "null_resource" "n1" {
+  connection {
+    type  = "ssh"
+    user = "ec2-user"
+    private_key = file(local_file.ssh_key.filename)
+    host = aws_instance.demo1.public_ip
+  } 
+  provisioner "local-exec" {
+    command = "echo hello" 
+  }
+  provisioner "remote-exec" {
+    inline = [
+        "sudo useradd serge1",
+        "mkdir terraform1",
+    ]
+  }
+  provisioner "file" {
+    source = "week12key.pem"
+    destination = "/tmp/key.pem"
+  }
+ depends_on = [ aws_instance.demo1, local_file.ssh_key ]
+}
+
+
+
+
+*** vpc module
+
+module "vpc" {
+  source = "terraform-aws-modules/vpc/aws"
+
+  name = "terraform-module"
+  cidr = "10.0.0.0/16"
+
+  azs             = ["us-east-1a", "us-east-1b"]
+  private_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
+  public_subnets  = ["10.0.101.0/24", "10.0.102.0/24"]
+
+  enable_nat_gateway = false
+  enable_vpn_gateway = false
+
+  tags = {
+    Terraform = "true"
+    Environment = "dev"
+    Team = Devops
+  }
+}
+
+************ Home project, Interview prep.
+
+1- What is Terraform, and what problems does it solve?
+2-How does Terraform differ from other infrastructure as code tools?
+3-What are the main components of Terraform?
+4-Explain the concept of Infrastructure as Code (IaC) and its benefits.
+5-Describe the syntax used in Terraform configuration files.
+6-What are Terraform providers? Can you give some examples?
+7-How do you initialize a Terraform project?
+8-What is Terraform statefile?
+9-In your current company, how do you guys manage statefile?
+10-How would use terraform to manage a ressource that was created outside of terraform?
+11-What would you do if you loose your statefile
+12-How do you manage sensitive data, such as passwords, in Terraform?
+13-How do you handle dependencies between Terraform resources?
+14- what is terraform module? and why is it important?
+15- have you writen a module? if yes walk me thru it.
+16-How do you handle Terraform configuration drift?
+17-What is a Terraform graph, and how can it be useful?
+18-What is the purpose of terraform init, terraform fmt, terraform validate, 
+19- how would you check the cost of your aws infrastructure in terraform?
+20-Describe an aws migration project you worked on and the role play in it.
+21- what are some terraform blocks you know?
+22- How would you delete just one resource in terraform?
+23-How would you prevent accidental deletion of resource thru terraform destroy command.?
+24-Write a terraform code that will do below:
+- create an ec2 instance
+- get the private ip address of the ec2 into a file called serverIp.log
+- code the file serverIP.log into the ec2 instance in /opt directory.
+25- what is a provisionner in terraform?
+26- what is a null resource in terraform.
+27- how would you refference a resource that was not created using terraform in your terraform code?
+28- The team is adopting terraform as IAC tool. create a documentation on terraform best practices that will be used by the team.
+29- as part of the adoption, you are in charge of writing few modules. go ahead and write a module for:
+rds, sns, security group, ebs, ssh-key-pair for ec2, ssh-keypair for lightsail, lightsail.
+
+NB: add them in the repo DevOps-Terraform-code-12 in the folder module.
+  
+30- Explain what this code is for :
+  import {
+  to = aws_instance.demo
+  id = "i-0c2803efdc45be391"
+}
+31- for demo purpose, your manager needs an on demande solution:
+he has a POC on docker and will need a solution that can be deployed for the demo and shutdown after the demo.
+for now what is done is to lunch an ec2 instance, install docker and docker compose on it  manually and then terminate the instance
+after the demo. please go ahead a propose a better or more automated solution.
+32- what are the cons of terraform?
+
+%%%%%%%%%%%%%%%%%%% week12 d4
+
+provider "aws" {
+    region = "us-east-1"
+  
+}
+
+resource "aws_db_instance" "default" {
+  allocated_storage    = 10
+  db_name              = "mydb"
+  engine               = "mysql"
+  engine_version       = "5.7"
+  instance_class       = "db.t3.micro"
+  username             = "foo"
+  password             = "foobarbaz"
+  parameter_group_name = "default.mysql5.7"
+  skip_final_snapshot  = true
+  backup_retention_period = 0
+  identifier = "dev-database"
+
+}
+
+** rds module
+
+** main.tf
+provider "aws" {
+    region = var.region
+  
+}
+
+resource "aws_db_instance" "default" {
+  allocated_storage    = var.allocated_storage
+  db_name              = var.db_name
+  engine               = var.engine
+  engine_version       = var.engine_version
+  instance_class       = var.instance_class
+  username             = var.username
+  password             = var.password
+  parameter_group_name = var.parameter_group_name
+  skip_final_snapshot  = var.skip_final_snapshot
+  backup_retention_period = var.backup_retention_period
+  identifier = var.identifier
+}
+
+**variables.tf
+
+variable "allocated_storage" {
+ default = 10 
+}
+variable "backup_retention_period" {
+ description = "How long backup should be kept" 
+ default = 0
+}
+variable "db_name" {
+  description = "Name of the initial database"
+  default = "devdb"
+}
+variable "engine" {
+  default = "mysql"
+}
+variable "engine_version" {
+  default = "5.7"
+}
+variable "identifier" {
+ default = "dev-database" 
+}
+variable "password" {
+   sensitive = true 
+  
+}
+variable "username" {
+  sensitive = true
+}
+variable "instance_class" {
+ default =  "db.t3.micro" 
+}
+variable "region" {
+ default = "us-east-1"
+}
+variable "skip_final_snapshot" {
+ default = true 
+}
+variable "parameter_group_name" {
+ default = "default.mysql5.7" 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% week13 DevOps Intro
+
+aws sts get-caller-identity   #==> get user configured using aws configure command
+
+**** DeVOps Concept *****
+
+first what is SDLC ( software developement life cycle)
+requirements==> Design==> Implementation or coding ==> verification/test ==> maintenance
+
+method used:
+  - Waterfall
+  - Agile
+  - Lean
+  - DevOps
+DevOps is a sdlc that emphasize on collaboration between ops and dev
+
+DevOps is a combination of people, processes, and tools aimed at improving and 
+automating the collaboration between development and operations teams. 
+The key components of DevOps can be summarized as follows:
+
+***People: DevOps emphasizes collaboration and communication between developers, operations 
+staff, and other stakeholders. It encourages a culture of shared responsibility and 
+continuous learning.
+
+***Processes: DevOps promotes agile practices, continuous integration, continuous delivery 
+(CI/CD), and other methodologies that enable faster and more reliable software delivery. 
+It focuses on streamlining workflows, reducing bottlenecks, and improving efficiency across 
+the software development lifecycle.
+
+***Tools: Various tools are used in DevOps to automate processes, monitor performance, 
+manage infrastructure, and facilitate collaboration. These tools can include version control 
+systems (e.g., Git), continuous integration servers (e.g., Jenkins, GitLab CI/CD), 
+configuration management tools (e.g., Ansible, Puppet, Chef), containerization and 
+orchestration platforms (e.g., Docker, Kubernetes), and monitoring solutions (e.g., Prometheus, Grafana).
+
+By integrating people, processes, and tools, DevOps aims to create a culture and environment where software development and IT operations teams can work together more effectively, deliver software faster, and maintain high levels of quality and reliability.
+
+**DevOps Flow **
+plan==>code==>build==>test <==> Integration <==>release==> deploy==> operate==> monitor 
+
+***** Docker lab setup****** 
+
+cd ~
+mkdir week13
+cd week13
+git clone https://github.com/utrains/docker-Lab.git
+cd docker-Lab
+terraform init
+terraform apply --auto-approve
+
+aws ecr get-login-password --region us-east-1
+docker run -d -p 8010:80 --name utcapp 076892551558.dkr.ecr.us-east-1.amazonaws.com/utc-app-dev:latest
+
+221  cd static-app/
+  222  ls
+  223  rm -rf .git
+  224  ls
+  225  git init
+  226  git status
+  227  git add -A
+  228  git status
+  229  git commit -m "code"
+  230  git remote add origin https://github.com/kserge2001/awscicd.git
+  231  git branch -M main
+  232  git push -u origin main
+  233  history 
+  
+************************ Home for interview prep ************************
+
+1- How would you run container in the aws?
+2- what have you done with docker?
+3- what are some docker best practices?
+4- what are the cons of docker?
+5- What is the difference between monolithic and microservice application? which one is better and why?
+6- Describe the SDLC lifecycle
+7- are you familiar with agile method? please elaborate.
+8- what do you think is DevOps?
+9- what is continious integration?
+10- what is the difference between continious delivery and continious deployment?
+11- in your current company, how often do you deploy code to production?
+12- I have a piece of code describe me the whole process how you will deploy it to prod.
+13- what are the deploy strategies or patterns that you are familiar with? what have you used?
+14- when a code or artifact is ready for production what happen in your company?
+15- what is your experience building CI/CD pipeline?
+16- The developer needs to inject a username=deploy-uer and a password=PasswOrd10! in ther code.
+and it is not safe to add it in thier code. how can you help them with this issue in the pipeline?
+17- How do you troubleshoot a failure in the CI/CD pipeline?
+18- In the Dockerfile used in this project, (DockerfileProd) we can see that the base image httpd 
+is comming from dockerhub; we need to get an image base on alipene, with some package installed on it 
+and then stored in ecr. that image will then be used as a base image to avoid pulling image from docker hub.
+Go ahead and make the necessary changes. packages { vim,curl,wget} port 8000 should be opened as well.
+19-How would you add a stage in codepipeline?
+20-In the utc-app-pipeline pipeline, add a step to create a container with the image built, display the container running before the image push.
+this is just a test case to know if the image is good.
+21-what is the difference between agile kanban,scrum and scrumban?
